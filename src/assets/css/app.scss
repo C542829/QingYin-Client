@@ -1,0 +1,40 @@
+@import "var.scss";
+@import "global.scss";
+
+#app {
+  @include layout(flex-start, flex-start, column);
+  background-color: $theme-background-color;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow-white;
+  height: 90%;
+  min-height: 600px;
+  max-height: 800px;
+  width: 80%;
+  min-width: 1080px;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#app>div:first-child {
+  @include layout(flex-start, stretch, row);
+  height: 90%;
+  min-height: 500px;
+  width: 100%;
+}
+
+.page-content{
+  @include layout(flex-start, stretch, column);
+  width: 88%;
+}
+
+.music-content-bar {
+  width: 100%;
+  height: 90%;
+  position: relative;
+}
+
+

@@ -1,0 +1,16 @@
+@import "var.scss";
+@import "global.scss";
+
+.search{
+  display: flex;
+  height: 100%;
+
+  .song-list-search{
+    width: 55%;
+    margin: 0 5%;
+  }
+  .songList-list-search{
+    width: 30%;
+  }
+}
+

@@ -1,0 +1,62 @@
+@import "var.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2d2e36 !important;
+}
+
+ul,
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+html {
+
+}
+
+div {
+  box-sizing: content-box;
+}
+
+/*表单*/
+.el-select-dropdown__item {
+  display: block !important;
+}
+div .el-form-item__label {
+  color: $color-grey;
+}
+div .el-radio{
+  color: $color-grey;
+}
+
+/*轮播图*/
+.el-scrollbar__view,
+.el-select-dropdown__list {
+  width: 100% !important;
+  text-align: center;
+}
+
+.el-carousel__indicators,
+.el-carousel__indicators--outside {
+  display: inline-block;
+}
+
+.el-slider__runway {
+  background-color: $color-blue !important;
+}
+
+// 空列表提示
+.empty-tip {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: $color-grey
+}

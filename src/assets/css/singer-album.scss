@@ -1,0 +1,105 @@
+@import "var.scss";
+
+.singer-album {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+
+/*左*/
+.album-slide {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+
+  .singer-bar {
+    width: 90%;
+    margin: 10% 0 10% 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    .singer-img {
+      width: 40%;
+      padding-bottom: 40%;
+      height: 0;
+      border-radius: 15%;
+      overflow: hidden;
+      border: 5px solid $color-white;
+      background-color: $color-white;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .info {
+      font-size: 18px;
+      width: 45%;
+
+      li {
+        text-indent: 10px;
+        width: 100%;
+        line-height: 30px;
+
+        b {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .intro {
+    width: 80%;
+    margin: 0 auto;
+    line-height: 25px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 9;
+
+    h2 {
+      display: inline-block;
+    }
+
+    span {
+      word-wrap: break-word;
+      font-size: 16px;
+      font-weight: 400;
+      text-overflow: ellipsis;
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+/*返回上一步*/
+//.backToPrevious {
+//  width: 5%;
+//  height: 200px;
+//  line-height: 150px;
+//  text-align: center;
+//  //border: red solid 1px;
+//  position: relative;
+//
+//  i {
+//    font-size: 30px;
+//    color: white;
+//    cursor: pointer;
+//  }
+//}
+
+/*右*/
+
+.album-content {
+  width: 60%;
+  height: 100%;
+
+  .content{
+    height: 100%;
+  }
+
+}
+

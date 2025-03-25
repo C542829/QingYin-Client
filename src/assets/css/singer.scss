@@ -1,0 +1,42 @@
+@import "var.scss";
+@import "global.scss";
+
+.singer {
+  height: 100%;
+
+  .singer-header {
+    width: 100%;
+    padding: 0 40px;
+
+    li {
+      display: inline-block;
+      line-height: 40px;
+      margin: 25px 20px 15px 20px;
+      font-size: 20px;
+      font-weight: 600;
+      color: $color-grey;
+      border-bottom: none;
+      cursor: pointer;
+    }
+
+    li.active {
+      color: $color-black;
+      font-weight: 600;
+      border-bottom: 4px solid $color-black;
+    }
+  }
+}
+
+.singer-content{
+  height: 85%;
+
+  .content-singer-bar{
+    height: 85%;
+  }
+
+  .pagination {
+    height: 15%;
+    @include layout(center);
+    transform: translateY(10px);
+  }
+}

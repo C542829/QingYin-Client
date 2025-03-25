@@ -1,0 +1,126 @@
+@import "var.scss";
+@import "global.scss";
+
+
+
+.the-leftBar {
+  line-height: $header-height;
+  border-radius: $border-radius 0 0 $border-radius;
+  width: 12%;
+  padding-top: 20px;
+  background-color: #F0F3F6;
+  box-sizing: border-box;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  .header-logo{
+    margin: 10% 0 20% 0;
+    .logo{
+      width: 70%;
+      min-width: 120px;
+      height: 80px;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+  }
+}
+
+/*nav*/
+.navbar {
+  font-weight: bold;
+  height: $header-height;
+  white-space: nowrap;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 10px;
+
+  li {
+    width: 80%;
+    border-radius: 15px;
+    margin: 0 auto;
+    font-size: $font-size-header;
+    color: $color-grey;
+    text-align: center;
+    border-bottom: none;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #d9dde0;
+    }
+  }
+}
+
+
+/*用户*/
+.header-right {
+  position: relative;
+  @include layout(center, center);
+  #user {
+    overflow: hidden;
+    width: $header-user-width;
+    height: $header-user-height;
+    border-radius: $header-user-radius;
+    margin: $header-user-margin;
+    cursor: pointer;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.menu {
+  display: none;
+  line-height: 0px;
+  position: absolute;
+  background-color: $color-white;
+  @include box-shadow(1px 1px 10px rgba(0, 0, 0, 0.4));
+  width: $header-menu-width;
+  padding: $header-menu-padding;
+  border-radius: $header-menu-radius;
+  top: $header-height + 10px;
+  right: -20px;
+  z-index: 5;
+  text-align: center;
+  cursor: pointer;
+
+  li {
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+
+    &:hover {
+      background-color: $theme-color;
+      color: $color-white;
+    }
+  }
+
+  :nth-child(1):before {
+    content: " ";
+    display: block; /*独占一行*/
+    position: absolute;
+    right: 45px;
+    top: -5px; /*果断的露出上半部分*/
+    width: 10px;
+    height: 10px;
+    background-color: $color-white;
+    /*一个正方形倾斜四十五度就是三角了但是要把下半部分藏起来*/
+    transform: rotate(45deg);
+  }
+  // :nth-child(1):hover:before {
+  // background-color: $theme-color;
+  // }
+}
+
+.show {
+  display: block;
+}
+
+.active {
+  color: $color-black;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+

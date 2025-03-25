@@ -1,0 +1,83 @@
+@import "var.scss";
+@import "global.scss";
+
+.content {
+  height: 100%;
+  overflow: scroll;
+
+  .content-header {
+    height: 20%;
+    .title {
+      padding-top: 6%;
+      padding-bottom: 2%;
+      text-indent: 20px;
+    }
+  }
+
+  .song-list-bar {
+    height: 75%;
+    margin-bottom: 5%;
+    > ul {
+      height: 93%;
+      width: 100%;
+      overflow-y: scroll;
+
+      > li {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        text-indent: 20px;
+        cursor: pointer;
+      }
+
+    }
+  }
+
+}
+
+.list-title {
+  font-size: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: block;
+  height: 7%;
+  text-indent: 20px;
+  font-weight: bold;
+}
+
+.song-item {
+  @include layout;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  .item-index {
+    width: 5%;
+  }
+
+  .item-title {
+    width: 30%;
+    @include text-overflow-ellipsis;
+  }
+
+  .item-name {
+    width: 25%;
+    @include text-overflow-ellipsis;
+  }
+
+  .item-intro {
+    width: 40%;
+    @include text-overflow-ellipsis;
+  }
+}
+
+.is-play {
+  color: black;
+  font-weight: bold;
+}
+
+.icon {
+  @include icon(1.3em, black);
+  vertical-align: -0.3em;
+  right: 5px;
+}

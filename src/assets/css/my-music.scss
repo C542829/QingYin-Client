@@ -1,0 +1,57 @@
+@import "var.scss";
+
+.my-music {
+  position: relative;
+  display: flex;
+  height: 100%;
+}
+
+/*左侧*/
+.album-slide {
+  width: 35%;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+
+  // 图片
+  .album-img {
+    height: 200px;
+    width: 200px;
+    margin: 10% auto;
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid $color-white;
+
+    img {
+      width: 100%;
+      height: 100%;
+      -ms-object-fit: cover;
+      object-fit: cover;
+    }
+  }
+
+  /*信息*/
+  .album-info {
+    color: $color-black;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 25%;
+
+    li {
+      word-wrap : break-word;
+      width: 100%;
+      line-height: 40px;
+    }
+  }
+}
+
+/*歌单内容*/
+.album-content {
+  height: 100%;
+  width: 60%;
+
+  .songs-body {
+    height: 100%;
+  }
+}

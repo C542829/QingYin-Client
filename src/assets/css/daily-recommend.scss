@@ -1,0 +1,102 @@
+@import "var.scss";
+@import "global.scss";
+
+.content {
+  width: 90%;
+  margin: 0 auto;
+  .content-header {
+
+    .title {
+      margin-left: 2%;
+      padding-bottom: 2%;
+    }
+  }
+
+  .song-list-bar {
+    height: 70%;
+
+    > ul {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      overflow-y: scroll;
+
+      > li {
+        width: 100%;
+        padding: 5px 0;
+        margin: 3px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        text-indent: 20px;
+        cursor: pointer;
+        border-radius: 25px;
+      }
+      li:hover{
+        background-color: rgba(255, 255, 255, 0.3);
+        transition: linear 0.5s;
+      }
+    }
+  }
+}
+
+.list-title {
+  font-size: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  display: block;
+  text-indent: 20px;
+  font-weight: bold;
+}
+
+.song-item {
+  @include layout;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  .item-index {
+    width: 5%;
+    text-align: center;
+  }
+
+  .item-pic{
+    width: 8%;
+    img{
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+      object-fit: cover;
+    }
+  }
+  .item-title {
+    width: 25%;
+    @include text-overflow-ellipsis;
+  }
+  .item-name {
+    width: 15%;
+    @include text-overflow-ellipsis;
+  }
+  .item-intro{
+    width: 30%;
+    @include text-overflow-ellipsis;
+  }
+  .item-duration{
+    width: 10%;
+  }
+}
+
+.is-play {
+  color: black;
+  font-weight: bold;
+}
+
+.icon {
+  @include icon(1.3em, black);
+  vertical-align: -0.3em;
+  right: 5px;
+}

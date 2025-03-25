@@ -1,0 +1,92 @@
+@import "var.scss";
+
+.lyric-play-bar{
+  height: 100%;
+  overflow: scroll;
+  display: flex;
+  justify-content: center;
+
+  .play-list{
+    width: 40%;
+    height: 100%;
+    z-index: 99;
+  }
+}
+
+.song-lyric {
+  width: 50%;
+  // font-family: $font-family;
+  position: relative;
+  z-index: 99;
+
+  .lyric-title {
+    text-align: center;
+    height: 15%;
+    line-height: 10vh;
+  }
+
+  .lyr-bar{
+    position: relative;
+    height: 80%;
+    .lyric-box {
+      height: 100%;
+      overflow: hidden;
+      overflow-y: scroll;
+      position: relative;
+      z-index: 11;
+
+      .has-lyric {
+        color: $color-black;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 200px 0 200px 0;
+        width: 100%;
+        z-index: 99;
+        min-height: 170px;
+        text-align: center;
+
+        li {
+          width: 100%;
+          height: 40px;
+          line-height: 40px;
+        }
+      }
+    }
+  }
+
+  .no-lyric {
+    margin: 100px 0;
+    width: 100%;
+    text-align: center;
+
+    span {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+}
+
+.blurBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  border-radius: 30px;
+
+  .blur {
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto auto;
+    -webkit-filter: blur(200px);
+    -moz-filter: blur(200px);
+    -ms-filter: blur(200px);
+    -ms-filter: blur(200px);
+    filter: blur(200px);
+  }
+}

@@ -1,0 +1,72 @@
+@import "var.scss";
+@import "global.scss";
+
+.content-list {
+  width: 95%;
+  margin: 0 auto;
+  .section-content {
+    @include layout(flex-start, stretch, row, wrap);
+  }
+}
+
+.content-item {
+  width: 10%;
+  margin: 1.25%;
+  overflow: hidden;
+  &:hover .item-img {
+    transform: scale(1.1);
+  }
+  .item-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin: 10px 8px;
+  }
+}
+
+.item-img {
+  width: 100%;
+  border-radius: 10px;
+  min-height: 90px;
+  transition: all 0.4s ease;
+}
+
+.kuo{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 100%;
+  height: 0;
+  border-radius: 10px;
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  background-color: rgba(52, 47, 41, 0.4);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  @include layout(center);
+  > .icon {
+    font-size: 1rem;
+    color: #fff;
+    margin: auto;
+    @include layout(center);
+  }
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+}
+
+.icon {
+  @include icon(2em, rgba(240, 240, 240, 1));
+}
